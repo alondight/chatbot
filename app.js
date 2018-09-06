@@ -87,7 +87,7 @@ function sendTextMessage(recipientId, message) {
         json: {
             recipient: { id: recipientId },
             message: { type: "image",
-					   playload : : {
+					   playload : {
 									url : "https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg",
 									is_reuseable:"true"
 								}
