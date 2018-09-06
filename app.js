@@ -141,6 +141,7 @@ function sendTextMessage(recipientId, message) {
 						]
 					  }
 					}
+				}
 			}
 		}, function(error, response, body) {
 			if (error) {
