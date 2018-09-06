@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.send('Hi, Welcome to SMC PAGE!');
+    res.send('Hello world');
 })
 
 
@@ -28,12 +28,12 @@ app.get('/webhook', function(req, res) {
 })
 
 app.post("/webhook", function(req, res) {
-    console.log("[INFO]WEBHOOK GET IT WORKS");
+    console.log("WEBHOOK GET IT WORKS");
     var data = req.body;
     console.log(data);
 
     // Make sure this is a page subscription
-		console.log("data.object : " + data.object);
+    if (data.object == 'page') {
         // Iterate over each entry
         // There may be multiple if batched
         data.entry.forEach(function(pageEntry) {
@@ -86,7 +86,12 @@ function sendTextMessage(recipientId, message) {
         method: 'POST',
         json: {
             recipient: { id: recipientId },
-            message: { text: message }
+            message: { type: "image",
+					   playload : : {
+									url : "https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg",
+									is_reuseable:"true"
+								}
+					}
         }
     }, function(error, response, body) {
         if (error) {
