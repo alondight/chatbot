@@ -79,7 +79,7 @@ function receivedPostback(event) {
 }
 
 function sendTextMessage(recipientId, message) {
-	if( message.indexOf("hi")) {
+	if( message.toString().indexOf("hi") > -1) {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
 			qs: { access_token: PAGE_ACCESS_TOKEN },
