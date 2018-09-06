@@ -80,7 +80,7 @@ function receivedPostback(event) {
 
 function sendTextMessage(recipientId, message) {
 	console.log(message);
-	if(message.indexOf("안녕")>=0 ) {
+	if( message.indexOf("hi") >= 0 ) {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
 			qs: { access_token: PAGE_ACCESS_TOKEN },
