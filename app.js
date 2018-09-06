@@ -103,7 +103,44 @@ function sendTextMessage(recipientId, message) {
 			}
 		});
 	} else if (message.indexOf("다음") > -1 || message.indexOf("소개") > -1) {
-console.log("A");
+		request({
+			url: 'https://graph.facebook.com/v2.6/me/messages',
+			qs: { access_token: PAGE_ACCESS_TOKEN },
+			method: 'POST',
+			json: {
+				recipient: { id: recipientId },
+				"message":{
+				  "attachment":{
+					"type":"image", 
+					"payload": {
+					  "template_type":"generic",
+					  "elements":[
+						 {
+						  "title":"안녕하세요^^THE SMC입니다.",
+						  "image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
+						  "subtitle":"반가워요! 환영합니다.",
+						  "default_action": {
+							"type": "web_url",
+							"url": "https://thesmc.co.kr/",
+							"messenger_extensions": false,
+							"webview_height_ratio": "full"
+						  },
+						  "buttons":[  {
+							"type":"web_url",
+							"url":"https://thesmc.co.kr/about/",
+							"title":"About"
+						  }]
+						}
+					  ]
+					}
+				  }
+				}
+			}
+		}, function(error, response, body) {
+			if (error) {
+				console.log('Error sending message: ' + response.error);
+			}
+		});
 	} else {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -121,17 +158,17 @@ console.log("A");
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/about/",
-							"title":"/About"
+							"title":"About"
 						  },
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/peoples/",
-							"title":"/Peoples"
+							"title":"Peoples"
 						  },
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/service/",
-							"title":"/Service"
+							"title":"Service"
 						  }
 						]
 					  }
