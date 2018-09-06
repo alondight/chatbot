@@ -116,17 +116,22 @@ console.log("A");
 					  "type":"template",
 					  "payload":{
 						"template_type":"button",
-						"text":"Next ?",
+						"text":"안녕하세요! THE SMC 입니다. 홈페이지를 구경 시켜드릴게요. ㅎㅎ",
 						"buttons":[
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/about/",
-							"title":"About"
+							"title":"/About"
 						  },
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/peoples/",
-							"title":"Peoples"
+							"title":"/Peoples"
+						  },
+						  {
+							"type":"web_url",
+							"url":"https://thesmc.co.kr/service/",
+							"title":"/Service"
 						  }
 						]
 					  }
