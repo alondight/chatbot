@@ -127,26 +127,6 @@ console.log("A");
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/peoples/",
 							"title":"Peoples"
-						  },
-						  {
-							"type":"web_url",
-							"url":"https://thesmc.co.kr/service/",
-							"title":"Service"
-						  },
-						  {
-							"type":"web_url",
-							"url":"https://thesmc.co.kr/works/",
-							"title":"Works"
-						  },
-						  {
-							"type":"web_url",
-							"url":"https://thesmc.co.kr/news/",
-							"title":"News"
-						  },
-						  {
-							"type":"web_url",
-							"url":"https://thesmc.co.kr/contact-us/",
-							"title":"Contact-Us"
 						  }
 						]
 					  }
