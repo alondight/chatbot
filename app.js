@@ -86,15 +86,15 @@ function sendTextMessage(recipientId, message) {
         method: 'POST',
         json: {
             recipient: { id: recipientId },
-            message: { 
-				"attachment" : { 
-					"type": "image",
-					"playload" : {
-						"url" : "https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg",
-						"is_reuseable":true
-							}
-						}
-					}
+		  "message":{
+			"attachment":{
+			  "type":"image", 
+			  "payload":{
+				"url":"https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg", 
+				"is_reusable":true
+			  }
+			}
+		  }
         }
     }, function(error, response, body) {
         if (error) {
