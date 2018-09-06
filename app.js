@@ -121,7 +121,7 @@ function sendTextMessage(recipientId, message) {
 							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							  "type": "web_url",
-							  "url": "https://thesmc.co.kr/",
+							  "url": "https://thesmc.co.kr/about/",
 							  "messenger_extensions": false,
 							  "webview_height_ratio": "tall",
 							  "fallback_url": "https://thesmc.co.kr/"
@@ -129,8 +129,8 @@ function sendTextMessage(recipientId, message) {
 							"buttons":[
 							  {
 								"type":"web_url",
-								"url":"https://www.naver.com",
-								"title":"View Naver"
+								"url":"https://petersfancybrownhats.com",
+								"title":"View Website"
 							  },{
 								"type":"postback",
 								"title":"Start Chatting",
@@ -141,8 +141,7 @@ function sendTextMessage(recipientId, message) {
 						]
 					  }
 					}
-				}
-			}
+				  }
 		}, function(error, response, body) {
 			if (error) {
 				console.log('Error sending message: ' + response.error);
