@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.send('Hello world');
+    res.send('안녕하세요!ㅎㅎ THE SMC 입니다. ');
 })
 
 
@@ -61,8 +61,7 @@ app.post("/webhook", function(req, res) {
 function receivedMessage(event) {
     var senderId = event.sender.id;
     var content = event.message.text;
-    var echo_message = "SMC : " + content;
-    sendTextMessage(senderId, echo_message);
+    sendTextMessage(senderId, content);
 }
 
 function receivedPostback(event) {
@@ -80,27 +79,51 @@ function receivedPostback(event) {
 }
 
 function sendTextMessage(recipientId, message) {
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: { access_token: PAGE_ACCESS_TOKEN },
-        method: 'POST',
-        json: {
-            recipient: { id: recipientId },
-		  "message":{
-			"attachment":{
-			  "type":"image", 
-			  "payload":{
-				"url":"https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg", 
-				"is_reusable":true
-			  }
+	if(message.indexOf('안녕') > 0) {
+		request({
+			url: 'https://graph.facebook.com/v2.6/me/messages',
+			qs: { access_token: PAGE_ACCESS_TOKEN },
+			method: 'POST',
+			json: {
+				recipient: { id: recipientId },
+				"message":{
+				  "attachment":{
+					"type":"image", 
+					"payload":{
+					  "url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg", 
+					  "is_reusable":true
+					}
+				  }
+				}
 			}
-		  }
-        }
-    }, function(error, response, body) {
-        if (error) {
-            console.log('Error sending message: ' + response.error);
-        }
-    });
+		}, function(error, response, body) {
+			if (error) {
+				console.log('Error sending message: ' + response.error);
+			}
+		});
+	} else {
+		request({
+			url: 'https://graph.facebook.com/v2.6/me/messages',
+			qs: { access_token: PAGE_ACCESS_TOKEN },
+			method: 'POST',
+			json: {
+				recipient: { id: recipientId },
+				"message":{
+				  "attachment":{
+					"type":"image", 
+					"payload":{
+					  "url":"https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg", 
+					  "is_reusable":true
+					}
+				  }
+				}
+			}
+		}, function(error, response, body) {
+			if (error) {
+				console.log('Error sending message: ' + response.error);
+			}
+		});
+	}
 }
 
 app.listen(app.get('port'), function() {
