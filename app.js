@@ -141,7 +141,6 @@ function sendTextMessage(recipientId, message) {
 				console.log('Error sending message: ' + response.error);
 			}
 		});
-
 	} else {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -175,7 +174,7 @@ function sendTextMessage(recipientId, message) {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/works/",
 							"title":"Works"
-						  },,
+						  },
 						  {
 							"type":"web_url",
 							"url":"https://thesmc.co.kr/news/",
