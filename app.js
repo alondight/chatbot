@@ -113,30 +113,23 @@ function sendTextMessage(recipientId, message) {
 					"attachment":{
 					  "type":"template",
 					  "payload":{
-						"template_type":"generic",
-						"elements":[
-						   {
-							"title":"Welcome!",
-							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
-							"subtitle":"We have the right hat for everyone.",
-							"default_action": {
-							  "type": "web_url",
-							  "url": "https://thesmc.co.kr/about/",
-							  "messenger_extensions": false,
-							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://thesmc.co.kr/"
-							},
-							"buttons":[
-							  {
-								"type":"web_url",
-								"url":"https://petersfancybrownhats.com",
-								"title":"View Website"
-							  },{
-								"type":"postback",
-								"title":"Start Chatting",
-								"payload":"DEVELOPER_DEFINED_PAYLOAD"
-							  }              
-							]      
+						"template_type":"button",
+						"text":"What do you want to do next?",
+						"buttons":[
+						  {
+							"type":"web_url",
+							"url":"https://www.messenger.com",
+							"title":"Visit Messenger1"
+						  },
+						  {
+							"type":"web_url",
+							"url":"https://www.messenger.com",
+							"title":"Visit Messenger2"
+						  },
+						  {
+							"type":"web_url",
+							"url":"https://www.messenger.com",
+							"title":"Visit Messenger3"
 						  }
 						]
 					  }
