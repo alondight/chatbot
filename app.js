@@ -79,7 +79,8 @@ function receivedPostback(event) {
 }
 
 function sendTextMessage(recipientId, message) {
-	if( String(message).indexOf("hi") > -1) {
+	message = String(message);
+	if( message.indexOf("안녕") > -1 || message.indexOf("안뇽") > -1 || message.indexOf("hello") > -1) {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
 			qs: { access_token: PAGE_ACCESS_TOKEN },
@@ -101,6 +102,39 @@ function sendTextMessage(recipientId, message) {
 				console.log('Error sending message: ' + response.error);
 			}
 		});
+	} else if (message.indexOf("SMC") > -1 || message.indexOf("소개") > -1) {
+		request({
+			url: 'https://graph.facebook.com/v2.6/me/messages',
+			qs: { access_token: PAGE_ACCESS_TOKEN },
+			method: 'POST',
+			json: {
+				recipient: { id: recipientId },
+				  "message":{
+					"attachment":{
+					  "type":"template",
+					  "payload":{
+						"template_type":"open_graph",
+						"elements":[
+						   {
+							"url":"https://thesmc.co.kr/",
+							"buttons":[
+							  {
+								"type":"https://thesmc.co.kr/",
+								"url":"https://thesmc.co.kr/",
+								"title":"View More"
+							  }
+							]
+						  }
+						]
+					  }
+					}
+			}
+		}, function(error, response, body) {
+			if (error) {
+				console.log('Error sending message: ' + response.error);
+			}
+		});
+
 	} else {
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
