@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.send('Hello world');
+    res.send('Hi, Welcome to SMC PAGE!');
 })
 
 
@@ -28,12 +28,12 @@ app.get('/webhook', function(req, res) {
 })
 
 app.post("/webhook", function(req, res) {
-    console.log("WEBHOOK GET IT WORKS");
+    console.log("[INFO]WEBHOOK GET IT WORKS");
     var data = req.body;
     console.log(data);
 
     // Make sure this is a page subscription
-    if (data.object == 'page') {
+		console.log("data.object : " + data.object);
         // Iterate over each entry
         // There may be multiple if batched
         data.entry.forEach(function(pageEntry) {
