@@ -109,32 +109,71 @@ function sendTextMessage(recipientId, message) {
 			method: 'POST',
 			json: {
 				recipient: { id: recipientId },
-				"message":{
-				  "attachment":{
-					"type":"image", 
-					"payload": {
-					  "template_type":"generic",
-					  "elements":[
-						 {
-						  "title":"안녕하세요^^THE SMC입니다.",
-						  "image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
-						  "subtitle":"반가워요! 환영합니다.",
-						  "default_action": {
-							"type": "web_url",
-							"url": "https://thesmc.co.kr/",
-							"messenger_extensions": false,
-							"webview_height_ratio": "full"
+				  "message": {
+					"attachment": {
+					  "type": "template",
+					  "payload": {
+						"template_type": "list",
+						"top_element_style": "compact",
+						"elements": [
+						  {
+							"title": "Classic T-Shirt Collection",
+							"subtitle": "See all our colors",
+							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EB%A9%94%EC%9D%B8%EC%8D%B82.jpg",          
+							"buttons": [
+							  {
+								"title": "View",
+								"type": "web_url",
+								"url": "https://peterssendreceiveapp.ngrok.io/collection",
+								"messenger_extensions": true,
+								"webview_height_ratio": "tall",
+								"fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
+							  }
+							]
 						  },
-						  "buttons":[  {
-							"type":"web_url",
-							"url":"https://thesmc.co.kr/about/",
-							"title":"About"
-						  }]
-						}
-					  ]
+						  {
+							"title": "Classic White T-Shirt",
+							"subtitle": "See all our colors",
+							"default_action": {
+							  "type": "web_url",
+							  "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+							  "messenger_extensions": false,
+							  "webview_height_ratio": "tall"
+							}
+						  },
+						  {
+							"title": "Classic Blue T-Shirt",
+							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%95%84%EB%B9%A0%EC%9D%98.jpg",
+							"subtitle": "100% Cotton, 200% Comfortable",
+							"default_action": {
+							  "type": "web_url",
+							  "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+							  "messenger_extensions": true,
+							  "webview_height_ratio": "tall",
+							  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+							},
+							"buttons": [
+							  {
+								"title": "Shop Now",
+								"type": "web_url",
+								"url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+								"messenger_extensions": true,
+								"webview_height_ratio": "tall",
+								"fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
+							  }
+							]        
+						  }
+						],
+						 "buttons": [
+						  {
+							"title": "View More",
+							"type": "postback",
+							"payload": "payload"            
+						  }
+						]  
+					  }
 					}
 				  }
-				}
 			}
 		}, function(error, response, body) {
 			if (error) {
