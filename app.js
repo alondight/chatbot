@@ -116,8 +116,8 @@ function sendTextMessage(recipientId, message) {
 					"template_type":"generic",
 					"elements":[
 					   {
-						"title":"Welcome! THESMC!",
-						"image_url":"https://thesmc.co.kr/wp-content/themes/thesmc/images/common/btn_close.png",
+						"title":"Welcome!!",
+						"image_url":"https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-1/p200x200/39142999_382516482283675_6069927466682548224_n.png?_nc_cat=0&oh=65755865cd74bab3e8b328663dbefe87&oe=5C3020A8",
 						"subtitle":"We have the right hat for everyone.",
 						"default_action": {
 						  "type": "web_url",
@@ -135,8 +135,8 @@ function sendTextMessage(recipientId, message) {
 							"type":"postback",
 							"title":"Start Chatting",
 							"payload":"DEVELOPER_DEFINED_PAYLOAD"
-						  }              
-						]      
+						  }
+						]
 					  }
 					]
 				  }
