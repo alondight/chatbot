@@ -109,71 +109,39 @@ function sendTextMessage(recipientId, message) {
 			method: 'POST',
 			json: {
 				recipient: { id: recipientId },
-				  "message": {
-					"attachment": {
-					  "type": "template",
-					  "payload": {
-						"template_type": "list",
-						"top_element_style": "compact",
-						"elements": [
+				"message":{
+				"attachment":{
+				  "type":"template",
+				  "payload":{
+					"template_type":"generic",
+					"elements":[
+					   {
+						"title":"Welcome!",
+						"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
+						"subtitle":"We have the right hat for everyone.",
+						"default_action": {
+						  "type": "web_url",
+						  "url": "https://thesmc.co.kr",
+						  "messenger_extensions": false,
+						  "webview_height_ratio": "tall",
+						  "fallback_url": "https://petersfancybrownhats.com/"
+						},
+						"buttons":[
 						  {
-							"title": "TESTS",
-							"subtitle": "See all our colors",
-							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EB%A9%94%EC%9D%B8%EC%8D%B82.jpg",          
-							"buttons": [
-							  {
-								"title": "View",
-								"type": "web_url",
-								"url": "https://thesmc.co.kr",
-								"messenger_extensions": false,
-								"webview_height_ratio": "tall",
-								"fallback_url": "https://thesmc.co.kr"            
-							  }
-							]
-						  },
-						  {
-							"title": "Classic A T-Shirt",
-							"subtitle": "See all our colors",
-							"default_action": {
-							  "type": "web_url",
-							  "url": "https://thesmc.co.kr",
-							  "messenger_extensions": false,
-							  "webview_height_ratio": "tall"
-							}
-						  },
-						  {
-							"title": "Classic B T-Shirt",
-							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%95%84%EB%B9%A0%EC%9D%98.jpg",
-							"subtitle": "100% Cotton, 200% Comfortable",
-							"default_action": {
-							  "type": "web_url",
-							  "url": "https://thesmc.co.kr",
-							  "messenger_extensions": false,
-							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://thesmc.co.kr"
-							},
-							"buttons": [
-							  {
-								"title": "GOOD",
-								"type": "web_url",
-								"url": "https://thesmc.co.kr",
-								"messenger_extensions": false,
-								"webview_height_ratio": "tall",
-								"fallback_url": "https://thesmc.co.kr"            
-							  }
-							]        
-						  }
-						],
-						 "buttons": [
-						  {
-							"title": "View More",
-							"type": "postback",
-							"payload": "payload"
-						  }
-						]  
+							"type":"web_url",
+							"url":"https://petersfancybrownhats.com",
+							"title":"View Website"
+						  },{
+							"type":"postback",
+							"title":"Start Chatting",
+							"payload":"DEVELOPER_DEFINED_PAYLOAD"
+						  }              
+						]      
 					  }
-					}
+					]
 				  }
+				}
+			  }
 			}
 		}, function(error, response, body) {
 			if (error) {
