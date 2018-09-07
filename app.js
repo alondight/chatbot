@@ -117,7 +117,7 @@ function sendTextMessage(recipientId, message) {
 						"top_element_style": "compact",
 						"elements": [
 						  {
-							"title": "Classic T-Shirt Collection",
+							"title": "TESTS",
 							"subtitle": "See all our colors",
 							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EB%A9%94%EC%9D%B8%EC%8D%B82.jpg",          
 							"buttons": [
@@ -132,7 +132,7 @@ function sendTextMessage(recipientId, message) {
 							]
 						  },
 						  {
-							"title": "Classic White T-Shirt",
+							"title": "Classic A T-Shirt",
 							"subtitle": "See all our colors",
 							"default_action": {
 							  "type": "web_url",
@@ -142,22 +142,22 @@ function sendTextMessage(recipientId, message) {
 							}
 						  },
 						  {
-							"title": "Classic Blue T-Shirt",
+							"title": "Classic B T-Shirt",
 							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%95%84%EB%B9%A0%EC%9D%98.jpg",
 							"subtitle": "100% Cotton, 200% Comfortable",
 							"default_action": {
 							  "type": "web_url",
 							  "url": "https://thesmc.co.kr",
-							  "messenger_extensions": true,
+							  "messenger_extensions": false,
 							  "webview_height_ratio": "tall",
 							  "fallback_url": "https://thesmc.co.kr"
 							},
 							"buttons": [
 							  {
-								"title": "Shop Now",
+								"title": "GOOD",
 								"type": "web_url",
 								"url": "https://thesmc.co.kr",
-								"messenger_extensions": true,
+								"messenger_extensions": false,
 								"webview_height_ratio": "tall",
 								"fallback_url": "https://thesmc.co.kr"            
 							  }
@@ -168,12 +168,13 @@ function sendTextMessage(recipientId, message) {
 						  {
 							"title": "View More",
 							"type": "postback",
-							"payload": "payload"            
+							"payload": "payload"
 						  }
 						]  
 					  }
 					}
 				  }
+			}
 		}, function(error, response, body) {
 			if (error) {
 				console.log('Error sending message: ' + response.error);
