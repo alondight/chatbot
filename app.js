@@ -125,7 +125,7 @@ function sendTextMessage(recipientId, message) {
 								"title": "View",
 								"type": "web_url",
 								"url": "https://thesmc.co.kr",
-								"messenger_extensions": true,
+								"messenger_extensions": false,
 								"webview_height_ratio": "tall",
 								"fallback_url": "https://thesmc.co.kr"            
 							  }
@@ -174,7 +174,6 @@ function sendTextMessage(recipientId, message) {
 					  }
 					}
 				  }
-			}
 		}, function(error, response, body) {
 			if (error) {
 				console.log('Error sending message: ' + response.error);
@@ -192,7 +191,7 @@ function sendTextMessage(recipientId, message) {
 					  "type":"template",
 					  "payload":{
 						"template_type":"button",
-						"text":"안녕하세요! THE SMC 입니다. 홈페이지를 구경 시켜드릴게요. ㅎㅎ",
+						"text":"안녕하세요! THE SMC 입니다. 홈페이지를 구경 시켜드릴게요. ^.^",
 						"buttons":[
 						  {
 							"type":"web_url",
