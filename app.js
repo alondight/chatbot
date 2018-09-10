@@ -119,7 +119,7 @@ function sendTextMessage(recipientId, message) {
 						  {
 							"title": "Classic T-Shirt Collection",
 							"subtitle": "See all our colors",
-							"image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",          
+							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",          
 							"buttons": [
 							  {
 								"title": "View",
@@ -143,7 +143,7 @@ function sendTextMessage(recipientId, message) {
 						  },
 						  {
 							"title": "Classic Blue T-Shirt",
-							"image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
 							"subtitle": "100% Cotton, 200% Comfortable",
 							"default_action": {
 							  "type": "web_url",
