@@ -122,7 +122,7 @@ function sendTextMessage(recipientId, message) {
 							"default_action": {
 							  "type": "web_url",
 							  "url": "https://thesmc.co.kr/about/",
-							  "messenger_extensions": false,
+							  "messenger_extensions": true,
 							  "webview_height_ratio": "tall",
 							  "fallback_url": "https://thesmc.co.kr/"
 							},
