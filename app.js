@@ -121,15 +121,15 @@ function sendTextMessage(recipientId, message) {
 							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							    "type": "web_url",
-							    "url": "https://thesmc.co.kr/about/",
+							    "url": "http://thesmc.smcpage.com",
 							    "messenger_extensions": false,
-							    "webview_height_ratio": "FULL",
-							    "fallback_url": "https://thesmc.co.kr/"
+							    "webview_height_ratio": "tall",
+							    "fallback_url": "http://thesmc.smcpage.com"
 							},
 							"buttons":[
 							  {
 								"type":"web_url",
-								"url":"https://petersfancybrownhats.com",
+								"url":"http://thesmc.smcpage.com",
 								"title":"View Website"
 							  },{
 								"type":"postback",
