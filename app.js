@@ -109,68 +109,36 @@ function sendTextMessage(recipientId, message) {
 			method: 'POST',
 			json: {
 				  "recipient" : { id: recipientId },
-				  "message": {
-					"attachment": {
-					  "type": "template",
-					  "payload": {
-						"template_type": "list",
-						"top_element_style": "compact",
-						"elements": [
-						  {
-							"title": "Title",
-							"subtitle": "Sub",
-							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",          
-							"buttons": [
-							  {
-								"title": "View",
-								"type": "web_url",
-								"url": "https://peterssendreceiveapp.ngrok.io/collection",
-								"messenger_extensions": true,
-								"webview_height_ratio": "tall",
-								"fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
-							  }
-							]
-						  },
-						  {
-							"title": "Classic White T-Shirt",
-							"subtitle": "See all our colors",
+				  "message":{
+					"attachment":{
+					  "type":"template",
+					  "payload":{
+						"template_type":"generic",
+						"elements":[
+						   {
+							"title":"Welcome!",
+							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
+							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							  "type": "web_url",
-							  "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+							  "url": "https://thesmc.co.kr/about/",
 							  "messenger_extensions": false,
-							  "webview_height_ratio": "tall"
-							}
-						  },
-						  {
-							"title": "Classic Blue T-Shirt",
-							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
-							"subtitle": "100% Cotton, 200% Comfortable",
-							"default_action": {
-							  "type": "web_url",
-							  "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-							  "messenger_extensions": true,
 							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+							  "fallback_url": "https://thesmc.co.kr/"
 							},
-							"buttons": [
+							"buttons":[
 							  {
-								"title": "Shop Now",
-								"type": "web_url",
-								"url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-								"messenger_extensions": true,
-								"webview_height_ratio": "tall",
-								"fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
-							  }
-							]        
+								"type":"web_url",
+								"url":"https://thesmc.co.kr",
+								"title":"View Website"
+							  },{
+								"type":"postback",
+								"title":"Start Chatting",
+								"payload":"DEVELOPER_DEFINED_PAYLOAD"
+							  }              
+							]      
 						  }
-						],
-						 "buttons": [
-						  {
-							"title": "View More",
-							"type": "postback",
-							"payload": "payload"            
-						  }
-						]  
+						]
 					  }
 					}
 				  }
