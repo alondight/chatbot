@@ -117,19 +117,19 @@ function sendTextMessage(recipientId, message) {
 						"elements":[
 						   {
 							"title":"Welcome!",
-							"image_url":"https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-1/p200x200/39142999_382516482283675_6069927466682548224_n.png?_nc_cat=0&oh=65755865cd74bab3e8b328663dbefe87&oe=5C3020A8",
+							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
 							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							  "type": "web_url",
-							  "url": "https://thesmc.co.kr/about/",
+							  "url": "http://thesmc.smcpage.com",
 							  "messenger_extensions": false,
-							  "webview_height_ratio": "FULL",
-							  "fallback_url": "https://thesmc.co.kr/"
+							  "webview_height_ratio": "tall",
+							  "fallback_url": "http://thesmc.smcpage.com"
 							},
 							"buttons":[
 							  {
 								"type":"web_url",
-								"url":"https://petersfancybrownhats.com",
+								"url":"http://thesmc.smcpage.com",
 								"title":"View Website"
 							  },{
 								"type":"postback",
@@ -142,7 +142,6 @@ function sendTextMessage(recipientId, message) {
 					  }
 					}
 				  }
-			}
 		}, function(error, response, body) {
 			if (error) {
 				console.log('Error sending message: ' + response.error);
