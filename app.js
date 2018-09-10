@@ -86,7 +86,7 @@ function sendTextMessage(recipientId, message) {
 			qs: { access_token: PAGE_ACCESS_TOKEN },
 			method: 'POST',
 			json: {
-				recipient: { id: recipientId },
+				"recipient": { id: recipientId },
 				"message":{
 				  "attachment":{
 					"type":"image", 
@@ -108,7 +108,7 @@ function sendTextMessage(recipientId, message) {
 			qs: { access_token: PAGE_ACCESS_TOKEN },
 			method: 'POST',
 			json: {
-				recipient: { id: recipientId },
+				  "recipient" : { id: recipientId },
 				  "message": {
 					"attachment": {
 					  "type": "template",
@@ -117,8 +117,8 @@ function sendTextMessage(recipientId, message) {
 						"top_element_style": "compact",
 						"elements": [
 						  {
-							"title": "Classic T-Shirt Collection",
-							"subtitle": "See all our colors",
+							"title": "Title",
+							"subtitle": "Sub",
 							"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",          
 							"buttons": [
 							  {
@@ -186,7 +186,7 @@ function sendTextMessage(recipientId, message) {
 			qs: { access_token: PAGE_ACCESS_TOKEN },
 			method: 'POST',
 			json: {
-				recipient: { id: recipientId },
+				  "recipient": { id: recipientId },
 				  "message":{
 					"attachment":{
 					  "type":"template",
