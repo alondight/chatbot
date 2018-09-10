@@ -108,8 +108,8 @@ function sendTextMessage(recipientId, message) {
 			qs: { access_token: PAGE_ACCESS_TOKEN },
 			method: 'POST',
 			json: {
-				  "recipient" : { id: recipientId },
-				  "message":{
+				"recipient" : { id: recipientId },
+				"message":{
 					"attachment":{
 					  "type":"template",
 					  "payload":{
@@ -117,19 +117,19 @@ function sendTextMessage(recipientId, message) {
 						"elements":[
 						   {
 							"title":"Welcome!",
-							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
+							"image_url":"https://petersfancybrownhats.com/company_image.png",
 							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							  "type": "web_url",
-							  "url": "https://thesmc.co.kr/about/",
-							  "messenger_extensions": true,
+							  "url": "https://petersfancybrownhats.com/view?item=103",
+							  "messenger_extensions": false,
 							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://thesmc.co.kr/"
+							  "fallback_url": "https://petersfancybrownhats.com/"
 							},
 							"buttons":[
 							  {
 								"type":"web_url",
-								"url":"https://thesmc.co.kr",
+								"url":"https://petersfancybrownhats.com",
 								"title":"View Website"
 							  },{
 								"type":"postback",
@@ -141,7 +141,7 @@ function sendTextMessage(recipientId, message) {
 						]
 					  }
 					}
-				  }
+				}
 			}
 		}, function(error, response, body) {
 			if (error) {
