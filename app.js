@@ -131,11 +131,7 @@ function sendTextMessage(recipientId, message) {
 								"type":"web_url",
 								"url":"http://thesmc.smcpage.com",
 								"title":"View Website"
-							  },{
-								"type":"postback",
-								"title":"Start Chatting",
-								"payload":"DEVELOPER_DEFINED_PAYLOAD"
-							  }              
+							  }           
 							]      
 						  }
 						]
