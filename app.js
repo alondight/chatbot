@@ -119,25 +119,21 @@ function sendTextMessage(recipientId, message) {
 						"elements":[
 						   {
 							"title":"Welcome!",
-							"image_url":"https://petersfancybrownhats.com/company_image.png",
+							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
 							"subtitle":"We have the right hat for everyone.",
 							"default_action": {
 							  "type": "web_url",
-							  "url": "https://petersfancybrownhats.com/view?item=103",
+							  "url": "https://thesmc.co.kr/about",
 							  "messenger_extensions": false,
 							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://petersfancybrownhats.com/"
+							  "fallback_url": "https://thesmc.co.kr/"
 							},
 							"buttons":[
 							  {
 								"type":"web_url",
-								"url":"https://petersfancybrownhats.com",
+								"url":"https://thesmc.co.kr",
 								"title":"View Website"
-							  },{
-								"type":"postback",
-								"title":"Start Chatting",
-								"payload":"DEVELOPER_DEFINED_PAYLOAD"
-							  }              
+							  }          
 							]      
 						  }
 						]
