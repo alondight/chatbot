@@ -111,33 +111,49 @@ function sendTextMessage(recipientId, message) {
 			method: 'POST',
 			json: {
 				"recipient" : { id: recipientId },
-				"message":{
-					"attachment":{
-					  "type":"template",
-					  "payload":{
-						"template_type":"generic",
-						"elements":[
-						   {
-							"title":"Welcome!",
-							"image_url":"https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%82%AC%EC%98%A5.jpg",
-							"subtitle":"We have the right hat for everyone.",
-							"default_action": {
-							  "type": "web_url",
-							  "url": "https://thesmc.co.kr/about",
-							  "messenger_extensions": false,
-							  "webview_height_ratio": "tall",
-							  "fallback_url": "https://thesmc.co.kr/"
-							},
-							"buttons":[
-							  {
-								"type":"web_url",
-								"url":"https://thesmc.co.kr",
-								"title":"View Website"
-							  }          
-							]      
-						  }
-						]
-					  }
+				  "message": {
+					"attachment": {
+						"type": "template",
+						"payload": {
+							"template_type": "list",
+							"top_element_style": "compact",
+							"elements": [{
+									"title": "Hello 1",
+									"subtitle": "Subtitle 1",
+									"buttons": [{
+										"title": "View",
+										"type": "web_url",
+										"url": "https://www.medium.com/",
+										"messenger_extensions": "false",
+										"webview_height_ratio": "full"
+									}],
+									"default_action": {
+										"type": "web_url",
+										"url": "https://www.medium.com/",
+										"messenger_extensions": "false",
+										"webview_height_ratio": "full"
+									}
+								},
+								{
+									"title": "Hello 2",
+									"subtitle": "Subtitle 2",
+									"image_url": "https://cdn-images-1.medium.com/1*Vkf6A8Mb0wBoL3Fw1u0paA.jpeg",
+									"buttons": [{
+										"title": "View",
+										"type": "web_url",
+										"url": "https://www.medium.com/",
+										"messenger_extensions": "false",
+										"webview_height_ratio": "full"
+									}],
+									"default_action": {
+										"type": "web_url",
+										"url": "https://www.medium.com/",
+										"messenger_extensions": "false",
+										"webview_height_ratio": "full"
+									}
+								}
+							]
+						}
 					}
 				}
 			}
