@@ -62,7 +62,7 @@ function receivedMessage(event) {
     var senderId = event.sender.id;
     var content = event.message.text;
 	console.log("senderId : " + senderId);
-	console.log("contents : " + contents);
+	console.log("contents : " + content);
     sendTextMessage(senderId, content);
 }
 
