@@ -61,6 +61,8 @@ app.post("/webhook", function(req, res) {
 function receivedMessage(event) {
     var senderId = event.sender.id;
     var content = event.message.text;
+	console.log("senderId : " + senderId);
+	console.log("contents : " + contents);
     sendTextMessage(senderId, content);
 }
 
@@ -103,6 +105,7 @@ function sendTextMessage(recipientId, message) {
 			}
 		});
 	} else if (message.indexOf("다음") > -1 || message.indexOf("소개") > -1) {
+		console.log("intro Debugging");
 		request({
 			url: 'https://graph.facebook.com/v2.6/me/messages',
 			qs: { access_token: PAGE_ACCESS_TOKEN },
@@ -144,6 +147,8 @@ function sendTextMessage(recipientId, message) {
 				}
 			}
 		}, function(error, response, body) {
+			console.log("response : " +response);
+			console.log("body : " +body);
 			if (error) {
 				console.log('Error sending message: ' + response.error);
 			}
