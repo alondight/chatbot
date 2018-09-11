@@ -118,36 +118,37 @@ function sendTextMessage(recipientId, message) {
 							"template_type": "list",
 							"top_element_style": "compact",
 							"elements": [{
-									"title": "Hello 1",
-									"subtitle": "Subtitle 1",
+									"title": "Works",
+									"subtitle": "Take a look!",
+									"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/07/%ED%99%8D%EC%9D%B4.jpg",
 									"buttons": [{
-										"title": "View",
+										"title": "Go!",
 										"type": "web_url",
-										"url": "https://www.medium.com/",
+										"url": "https://thesmc.co.kr/works/",
 										"messenger_extensions": "false",
 										"webview_height_ratio": "full"
 									}],
 									"default_action": {
 										"type": "web_url",
-										"url": "https://www.medium.com/",
+										"url": "https://thesmc.co.kr/works/",
 										"messenger_extensions": "false",
 										"webview_height_ratio": "full"
 									}
 								},
 								{
-									"title": "Hello 2",
-									"subtitle": "Subtitle 2",
-									"image_url": "https://cdn-images-1.medium.com/1*Vkf6A8Mb0wBoL3Fw1u0paA.jpeg",
+									"title": "News",
+									"subtitle": "Check our latest news",
+									"image_url": "https://thesmc.co.kr/wp-content/uploads/2018/08/%EC%95%84%EB%B9%A0%EC%9D%98.jpg",
 									"buttons": [{
-										"title": "View",
+										"title": "Go!",
 										"type": "web_url",
-										"url": "https://www.medium.com/",
+										"url": "https://thesmc.co.kr/news/",
 										"messenger_extensions": "false",
 										"webview_height_ratio": "full"
 									}],
 									"default_action": {
 										"type": "web_url",
-										"url": "https://www.medium.com/",
+										"url": "https://thesmc.co.kr/news/",
 										"messenger_extensions": "false",
 										"webview_height_ratio": "full"
 									}
