@@ -146,8 +146,8 @@ function sendTextMessage(recipientId, message) {
 				}
 			}
 		}, function(error, response, body) {
-			console.log("response : " +response.toString());
-			console.log("body : " +body.toString());
+			console.log("response : " +JSON.stringify(response));
+			console.log("body : " +JSON.stringify(body));
 			if (error) {
 				console.log('Error sending message: ' + response.error);
 			}
